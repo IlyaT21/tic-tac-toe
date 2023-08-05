@@ -1,2 +1,2 @@
 # tic-tac-toe
-Tic tac toe game against an AI
+Tic tac toe game for two players

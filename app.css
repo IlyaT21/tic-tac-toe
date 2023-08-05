@@ -1,3 +1,7 @@
+body {
+	background: #e6e4be;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
@@ -13,6 +17,15 @@ main {
 	border: 0.5px solid #000;
 }
 
+h1 {
+	margin: 0;
+}
+
+h2 {
+	margin: 0;
+	height: 27px;
+}
+
 .field {
 	border-radius: 0;
 	border-width: 0.5px;
@@ -22,10 +35,50 @@ main {
 	align-items: center;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: 90%;
+	background-size: 100% 100%;
 	padding: 0;
+	background-color: #fff;
 }
 
-.field:focus {
+.field.active-o {
 	background-image: url('assets/o.svg');
+}
+
+.field.active-x {
+	background-image: url('assets/x.svg');
+}
+
+.score {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#replayBtn {
+	display: none;
+	background-color: #fff;
+	font-size: 40px;
+	padding: 16px;
+}
+
+@media (max-width: 550px) {
+	main {
+		gap: 20px;
+		padding: 0 2%;
+	}
+
+	.playing-field {
+		width: 100%;
+		height: auto;
+	}
+
+	.field {
+		aspect-ratio: 1 / 1;
+		background-size: 100% 100%;
+	}
+
+	#replayBtn {
+		width: 100%;
+	}
 }

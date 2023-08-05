@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,34 @@
 	<link rel="stylesheet" href="app.css">
 	<title>Tic Tac Toe</title>
 </head>
+
 <body>
 	<main>
-		<h1>Tic-Tac-Toe</h1>
+		<h1>
+			Player <span id="currPlayer">o</span> Turn
+		</h1>
 		<div class="user-info">
-			<input type="text" name="username" id="username" placeholder="Input Your Name">
-			<button id="save name">Submit</button>
+			<!-- For future use -->
+			<!-- <input type="text" name="username" id="username" placeholder="Input Your Name"> -->
+			<!-- <button id="save name">Submit</button> -->
+			<h2 id="result"></h2>
 		</div>
 		<div class="playing-field">
-			<button class="field" id="a1"></button>
-			<button class="field" id="b1"></button>
-			<button class="field" id="c1"></button>
-			<button class="field" id="a2"></button>
-			<button class="field" id="b2"></button>
-			<button class="field" id="c2"></button>
-			<button class="field" id="a3"></button>
-			<button class="field" id="b3"></button>
-			<button class="field" id="c3"></button>
+			<button class="field" id="a1" data-check=""></button>
+			<button class="field" id="b1" data-check=""></button>
+			<button class="field" id="c1" data-check=""></button>
+			<button class="field" id="a2" data-check=""></button>
+			<button class="field" id="b2" data-check=""></button>
+			<button class="field" id="c2" data-check=""></button>
+			<button class="field" id="a3" data-check=""></button>
+			<button class="field" id="b3" data-check=""></button>
+			<button class="field" id="c3" data-check=""></button>
+		</div>
+		<div class="score">
+			<button id="replayBtn">Replay?</button>
 		</div>
 	</main>
+	<script src="app.js"></script>
 </body>
+
 </html>
