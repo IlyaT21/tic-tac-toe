@@ -43,6 +43,11 @@ function checkWinningCombination(moves) {
 	return false;
 }
 
+// Function to check if the game board is a draw
+function checkDraw() {
+	return [...fieldItems].every(item => item.getAttribute('data-check') !== "");
+}
+
 function handleGridItemClick(event) {
 	const clickedItem = event.target;
 
@@ -57,12 +62,13 @@ function handleGridItemClick(event) {
 
 		// Check for a winning combination after each move
 		if (checkWinningCombination(playerMoves[currentPlayer])) {
-			// Reset the game or show a winning message as desired
-
 			fieldItems.forEach(item => {
 				item.disabled = true;
 			});
 
+			replayBtn.style.display = 'block';
+		} else if (checkDraw()) {
+			document.getElementById('result').innerText = 'Round Draw';
 			replayBtn.style.display = 'block';
 		}
 
